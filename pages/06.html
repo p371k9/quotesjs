@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<title>Quotes to Scrape</title>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row header-box">
+            <div class="col-md-8">
+                <h1>
+                    <a href="/" style="text-decoration: none">Quotes to Scrape</a>
+                </h1>
+            </div>
+            <div class="col-md-4">
+                <p>
+                
+                    <a href="/login">Login</a>
+                
+                </p>
+            </div>
+        </div>
+    
+<script src="/static/jquery.js"></script>
+<script>
+    var data = [
+    {
+        "tags": [
+            "friendship",
+            "love"
+        ],
+        "author": {
+            "name": "Jane Austen",
+            "goodreads_link": "/author/show/1265.Jane_Austen",
+            "slug": "Jane-Austen"
+        },
+        "text": "\u201cThere is nothing I would not do for those who are really my friends. I have no notion of loving people by halves, it is not my nature.\u201d"
+    },
+    {
+        "tags": [
+            "attributed",
+            "fear",
+            "inspiration"
+        ],
+        "author": {
+            "name": "Eleanor Roosevelt",
+            "goodreads_link": "/author/show/44566.Eleanor_Roosevelt",
+            "slug": "Eleanor-Roosevelt"
+        },
+        "text": "\u201cDo one thing every day that scares you.\u201d"
+    },
+    {
+        "tags": [
+            "attributed-no-source"
+        ],
+        "author": {
+            "name": "Marilyn Monroe",
+            "goodreads_link": "/author/show/82952.Marilyn_Monroe",
+            "slug": "Marilyn-Monroe"
+        },
+        "text": "\u201cI am good, but not an angel. I do sin, but I am not the devil. I am just a small girl in a big world trying to find someone to love.\u201d"
+    },
+    {
+        "tags": [
+            "music"
+        ],
+        "author": {
+            "name": "Albert Einstein",
+            "goodreads_link": "/author/show/9810.Albert_Einstein",
+            "slug": "Albert-Einstein"
+        },
+        "text": "\u201cIf I were not a physicist, I would probably be a musician. I often think in music. I live my daydreams in music. I see my life in terms of music.\u201d"
+    },
+    {
+        "tags": [
+            "books",
+            "thought"
+        ],
+        "author": {
+            "name": "Haruki Murakami",
+            "goodreads_link": "/author/show/3354.Haruki_Murakami",
+            "slug": "Haruki-Murakami"
+        },
+        "text": "\u201cIf you only read the books that everyone else is reading, you can only think what everyone else is thinking.\u201d"
+    },
+    {
+        "tags": [
+            "misattributed-to-einstein"
+        ],
+        "author": {
+            "name": "Alexandre Dumas fils",
+            "goodreads_link": "/author/show/3186713.Alexandre_Dumas_fils",
+            "slug": "Alexandre-Dumas-fils"
+        },
+        "text": "\u201cThe difference between genius and stupidity is: genius has its limits.\u201d"
+    },
+    {
+        "tags": [
+            "drug",
+            "romance",
+            "simile"
+        ],
+        "author": {
+            "name": "Stephenie Meyer",
+            "goodreads_link": "/author/show/941441.Stephenie_Meyer",
+            "slug": "Stephenie-Meyer"
+        },
+        "text": "\u201cHe's like a drug for you, Bella.\u201d"
+    },
+    {
+        "tags": [
+            "books",
+            "friends",
+            "novelist-quotes"
+        ],
+        "author": {
+            "name": "Ernest Hemingway",
+            "goodreads_link": "/author/show/1455.Ernest_Hemingway",
+            "slug": "Ernest-Hemingway"
+        },
+        "text": "\u201cThere is no friend as loyal as a book.\u201d"
+    },
+    {
+        "tags": [
+            "inspirational"
+        ],
+        "author": {
+            "name": "Helen Keller",
+            "goodreads_link": "/author/show/7275.Helen_Keller",
+            "slug": "Helen-Keller"
+        },
+        "text": "\u201cWhen one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us.\u201d"
+    },
+    {
+        "tags": [
+            "inspirational",
+            "life",
+            "yourself"
+        ],
+        "author": {
+            "name": "George Bernard Shaw",
+            "goodreads_link": "/author/show/5217.George_Bernard_Shaw",
+            "slug": "George-Bernard-Shaw"
+        },
+        "text": "\u201cLife isn't about finding yourself. Life is about creating yourself.\u201d"
+    }
+];
+    for (var i in data) {
+        var d = data[i];
+        var tags = $.map(d['tags'], function(t) {
+            return "<a class='tag'>" + t + "</a>";
+        }).join(" ");
+        document.write("<div class='quote'><span class='text'>" + d['text'] + "</span><span>by <small class='author'>" + d['author']['name'] + "</small></span><div class='tags'>Tags: " + tags + "</div></div>");
+        }
+</script><div class="quote"><span class="text">“There is nothing I would not do for those who are really my friends. I have no notion of loving people by halves, it is not my nature.”</span><span>by <small class="author">Jane Austen</small></span><div class="tags">Tags: <a class="tag">friendship</a> <a class="tag">love</a></div></div><div class="quote"><span class="text">“Do one thing every day that scares you.”</span><span>by <small class="author">Eleanor Roosevelt</small></span><div class="tags">Tags: <a class="tag">attributed</a> <a class="tag">fear</a> <a class="tag">inspiration</a></div></div><div class="quote"><span class="text">“I am good, but not an angel. I do sin, but I am not the devil. I am just a small girl in a big world trying to find someone to love.”</span><span>by <small class="author">Marilyn Monroe</small></span><div class="tags">Tags: <a class="tag">attributed-no-source</a></div></div><div class="quote"><span class="text">“If I were not a physicist, I would probably be a musician. I often think in music. I live my daydreams in music. I see my life in terms of music.”</span><span>by <small class="author">Albert Einstein</small></span><div class="tags">Tags: <a class="tag">music</a></div></div><div class="quote"><span class="text">“If you only read the books that everyone else is reading, you can only think what everyone else is thinking.”</span><span>by <small class="author">Haruki Murakami</small></span><div class="tags">Tags: <a class="tag">books</a> <a class="tag">thought</a></div></div><div class="quote"><span class="text">“The difference between genius and stupidity is: genius has its limits.”</span><span>by <small class="author">Alexandre Dumas fils</small></span><div class="tags">Tags: <a class="tag">misattributed-to-einstein</a></div></div><div class="quote"><span class="text">“He's like a drug for you, Bella.”</span><span>by <small class="author">Stephenie Meyer</small></span><div class="tags">Tags: <a class="tag">drug</a> <a class="tag">romance</a> <a class="tag">simile</a></div></div><div class="quote"><span class="text">“There is no friend as loyal as a book.”</span><span>by <small class="author">Ernest Hemingway</small></span><div class="tags">Tags: <a class="tag">books</a> <a class="tag">friends</a> <a class="tag">novelist-quotes</a></div></div><div class="quote"><span class="text">“When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us.”</span><span>by <small class="author">Helen Keller</small></span><div class="tags">Tags: <a class="tag">inspirational</a></div></div><div class="quote"><span class="text">“Life isn't about finding yourself. Life is about creating yourself.”</span><span>by <small class="author">George Bernard Shaw</small></span><div class="tags">Tags: <a class="tag">inspirational</a> <a class="tag">life</a> <a class="tag">yourself</a></div></div>
+<nav>
+    <ul class="pager">
+        
+        <li class="previous">
+            <a href="/js/page/5/"><span aria-hidden="true">←</span> Previous</a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/js/page/7/">Next <span aria-hidden="true">→</span></a>
+        </li>
+        
+    </ul>
+</nav>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">
+                Quotes by: <a href="https://www.goodreads.com/quotes">GoodReads.com</a>
+            </p>
+            <p class="copyright">
+                Made with <span class="sh-red">❤</span> by <a href="https://scrapinghub.com">Scrapinghub</a>
+            </p>
+        </div>
+    </footer>
+
+</body></html>

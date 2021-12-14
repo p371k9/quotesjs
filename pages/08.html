@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<title>Quotes to Scrape</title>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row header-box">
+            <div class="col-md-8">
+                <h1>
+                    <a href="/" style="text-decoration: none">Quotes to Scrape</a>
+                </h1>
+            </div>
+            <div class="col-md-4">
+                <p>
+                
+                    <a href="/login">Login</a>
+                
+                </p>
+            </div>
+        </div>
+    
+<script src="/static/jquery.js"></script>
+<script>
+    var data = [
+    {
+        "tags": [
+            "friendship",
+            "love"
+        ],
+        "author": {
+            "name": "Alfred Tennyson",
+            "goodreads_link": "/author/show/13638502.Alfred_Tennyson",
+            "slug": "Alfred-Tennyson"
+        },
+        "text": "\u201cIf I had a flower for every time I thought of you...I could walk through my garden forever.\u201d"
+    },
+    {
+        "tags": [
+            "humor"
+        ],
+        "author": {
+            "name": "Charles Bukowski",
+            "goodreads_link": "/author/show/13275.Charles_Bukowski",
+            "slug": "Charles-Bukowski"
+        },
+        "text": "\u201cSome people never go crazy. What truly horrible lives they must lead.\u201d"
+    },
+    {
+        "tags": [
+            "humor",
+            "open-mind",
+            "thinking"
+        ],
+        "author": {
+            "name": "Terry Pratchett",
+            "goodreads_link": "/author/show/1654.Terry_Pratchett",
+            "slug": "Terry-Pratchett"
+        },
+        "text": "\u201cThe trouble with having an open mind, of course, is that people will insist on coming along and trying to put things in it.\u201d"
+    },
+    {
+        "tags": [
+            "humor",
+            "philosophy"
+        ],
+        "author": {
+            "name": "Dr. Seuss",
+            "goodreads_link": "/author/show/61105.Dr_Seuss",
+            "slug": "Dr-Seuss"
+        },
+        "text": "\u201cThink left and think right and think low and think high. Oh, the thinks you can think up if only you try!\u201d"
+    },
+    {
+        "tags": [
+            "authors",
+            "books",
+            "literature",
+            "reading",
+            "writing"
+        ],
+        "author": {
+            "name": "J.D. Salinger",
+            "goodreads_link": "/author/show/819789.J_D_Salinger",
+            "slug": "J-D-Salinger"
+        },
+        "text": "\u201cWhat really knocks me out is a book that, when you're all done reading it, you wish the author that wrote it was a terrific friend of yours and you could call him up on the phone whenever you felt like it. That doesn't happen much, though.\u201d"
+    },
+    {
+        "tags": [
+            "humor",
+            "insanity",
+            "lies",
+            "lying",
+            "self-indulgence",
+            "truth"
+        ],
+        "author": {
+            "name": "George Carlin",
+            "goodreads_link": "/author/show/22782.George_Carlin",
+            "slug": "George-Carlin"
+        },
+        "text": "\u201cThe reason I talk to myself is because I\u2019m the only one whose answers I accept.\u201d"
+    },
+    {
+        "tags": [
+            "beatles",
+            "connection",
+            "dreamers",
+            "dreaming",
+            "dreams",
+            "hope",
+            "inspirational",
+            "peace"
+        ],
+        "author": {
+            "name": "John Lennon",
+            "goodreads_link": "/author/show/19968.John_Lennon",
+            "slug": "John-Lennon"
+        },
+        "text": "\u201cYou may say I'm a dreamer, but I'm not the only one. I hope someday you'll join us. And the world will live as one.\u201d"
+    },
+    {
+        "tags": [
+            "humor",
+            "sinister"
+        ],
+        "author": {
+            "name": "W.C. Fields",
+            "goodreads_link": "/author/show/82951.W_C_Fields",
+            "slug": "W-C-Fields"
+        },
+        "text": "\u201cI am free of all prejudice. I hate everyone equally. \u201d"
+    },
+    {
+        "tags": [],
+        "author": {
+            "name": "Ayn Rand",
+            "goodreads_link": "/author/show/432.Ayn_Rand",
+            "slug": "Ayn-Rand"
+        },
+        "text": "\u201cThe question isn't who is going to let me; it's who is going to stop me.\u201d"
+    },
+    {
+        "tags": [
+            "books",
+            "classic",
+            "reading"
+        ],
+        "author": {
+            "name": "Mark Twain",
+            "goodreads_link": "/author/show/1244.Mark_Twain",
+            "slug": "Mark-Twain"
+        },
+        "text": "\u201c\u2032Classic\u2032 - a book which people praise and don't read.\u201d"
+    }
+];
+    for (var i in data) {
+        var d = data[i];
+        var tags = $.map(d['tags'], function(t) {
+            return "<a class='tag'>" + t + "</a>";
+        }).join(" ");
+        document.write("<div class='quote'><span class='text'>" + d['text'] + "</span><span>by <small class='author'>" + d['author']['name'] + "</small></span><div class='tags'>Tags: " + tags + "</div></div>");
+        }
+</script><div class="quote"><span class="text">“If I had a flower for every time I thought of you...I could walk through my garden forever.”</span><span>by <small class="author">Alfred Tennyson</small></span><div class="tags">Tags: <a class="tag">friendship</a> <a class="tag">love</a></div></div><div class="quote"><span class="text">“Some people never go crazy. What truly horrible lives they must lead.”</span><span>by <small class="author">Charles Bukowski</small></span><div class="tags">Tags: <a class="tag">humor</a></div></div><div class="quote"><span class="text">“The trouble with having an open mind, of course, is that people will insist on coming along and trying to put things in it.”</span><span>by <small class="author">Terry Pratchett</small></span><div class="tags">Tags: <a class="tag">humor</a> <a class="tag">open-mind</a> <a class="tag">thinking</a></div></div><div class="quote"><span class="text">“Think left and think right and think low and think high. Oh, the thinks you can think up if only you try!”</span><span>by <small class="author">Dr. Seuss</small></span><div class="tags">Tags: <a class="tag">humor</a> <a class="tag">philosophy</a></div></div><div class="quote"><span class="text">“What really knocks me out is a book that, when you're all done reading it, you wish the author that wrote it was a terrific friend of yours and you could call him up on the phone whenever you felt like it. That doesn't happen much, though.”</span><span>by <small class="author">J.D. Salinger</small></span><div class="tags">Tags: <a class="tag">authors</a> <a class="tag">books</a> <a class="tag">literature</a> <a class="tag">reading</a> <a class="tag">writing</a></div></div><div class="quote"><span class="text">“The reason I talk to myself is because I’m the only one whose answers I accept.”</span><span>by <small class="author">George Carlin</small></span><div class="tags">Tags: <a class="tag">humor</a> <a class="tag">insanity</a> <a class="tag">lies</a> <a class="tag">lying</a> <a class="tag">self-indulgence</a> <a class="tag">truth</a></div></div><div class="quote"><span class="text">“You may say I'm a dreamer, but I'm not the only one. I hope someday you'll join us. And the world will live as one.”</span><span>by <small class="author">John Lennon</small></span><div class="tags">Tags: <a class="tag">beatles</a> <a class="tag">connection</a> <a class="tag">dreamers</a> <a class="tag">dreaming</a> <a class="tag">dreams</a> <a class="tag">hope</a> <a class="tag">inspirational</a> <a class="tag">peace</a></div></div><div class="quote"><span class="text">“I am free of all prejudice. I hate everyone equally. ”</span><span>by <small class="author">W.C. Fields</small></span><div class="tags">Tags: <a class="tag">humor</a> <a class="tag">sinister</a></div></div><div class="quote"><span class="text">“The question isn't who is going to let me; it's who is going to stop me.”</span><span>by <small class="author">Ayn Rand</small></span><div class="tags">Tags: </div></div><div class="quote"><span class="text">“′Classic′ - a book which people praise and don't read.”</span><span>by <small class="author">Mark Twain</small></span><div class="tags">Tags: <a class="tag">books</a> <a class="tag">classic</a> <a class="tag">reading</a></div></div>
+<nav>
+    <ul class="pager">
+        
+        <li class="previous">
+            <a href="/js/page/7/"><span aria-hidden="true">←</span> Previous</a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/js/page/9/">Next <span aria-hidden="true">→</span></a>
+        </li>
+        
+    </ul>
+</nav>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">
+                Quotes by: <a href="https://www.goodreads.com/quotes">GoodReads.com</a>
+            </p>
+            <p class="copyright">
+                Made with <span class="sh-red">❤</span> by <a href="https://scrapinghub.com">Scrapinghub</a>
+            </p>
+        </div>
+    </footer>
+
+</body></html>

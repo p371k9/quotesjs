@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<title>Quotes to Scrape</title>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row header-box">
+            <div class="col-md-8">
+                <h1>
+                    <a href="/" style="text-decoration: none">Quotes to Scrape</a>
+                </h1>
+            </div>
+            <div class="col-md-4">
+                <p>
+                
+                    <a href="/login">Login</a>
+                
+                </p>
+            </div>
+        </div>
+    
+<script src="/static/jquery.js"></script>
+<script>
+    var data = [
+    {
+        "tags": [
+            "learning",
+            "reading",
+            "seuss"
+        ],
+        "author": {
+            "name": "Dr. Seuss",
+            "goodreads_link": "/author/show/61105.Dr_Seuss",
+            "slug": "Dr-Seuss"
+        },
+        "text": "\u201cThe more that you read, the more things you will know. The more that you learn, the more places you'll go.\u201d"
+    },
+    {
+        "tags": [
+            "dumbledore"
+        ],
+        "author": {
+            "name": "J.K. Rowling",
+            "goodreads_link": "/author/show/1077326.J_K_Rowling",
+            "slug": "J-K-Rowling"
+        },
+        "text": "\u201cOf course it is happening inside your head, Harry, but why on earth should that mean that it is not real?\u201d"
+    },
+    {
+        "tags": [
+            "friendship"
+        ],
+        "author": {
+            "name": "Bob Marley",
+            "goodreads_link": "/author/show/25241.Bob_Marley",
+            "slug": "Bob-Marley"
+        },
+        "text": "\u201cThe truth is, everyone is going to hurt you. You just got to find the ones worth suffering for.\u201d"
+    },
+    {
+        "tags": [
+            "misattributed-to-mother-teresa",
+            "paraphrased"
+        ],
+        "author": {
+            "name": "Mother Teresa",
+            "goodreads_link": "/author/show/838305.Mother_Teresa",
+            "slug": "Mother-Teresa"
+        },
+        "text": "\u201cNot all of us can do great things. But we can do small things with great love.\u201d"
+    },
+    {
+        "tags": [
+            "death",
+            "inspirational"
+        ],
+        "author": {
+            "name": "J.K. Rowling",
+            "goodreads_link": "/author/show/1077326.J_K_Rowling",
+            "slug": "J-K-Rowling"
+        },
+        "text": "\u201cTo the well-organized mind, death is but the next great adventure.\u201d"
+    },
+    {
+        "tags": [
+            "chocolate",
+            "food",
+            "humor"
+        ],
+        "author": {
+            "name": "Charles M. Schulz",
+            "goodreads_link": "/author/show/209672.Charles_M_Schulz",
+            "slug": "Charles-M-Schulz"
+        },
+        "text": "\u201cAll you need is love. But a little chocolate now and then doesn't hurt.\u201d"
+    },
+    {
+        "tags": [
+            "misattributed-to-c-s-lewis",
+            "reading"
+        ],
+        "author": {
+            "name": "William Nicholson",
+            "goodreads_link": "/author/show/46130.William_Nicholson",
+            "slug": "William-Nicholson"
+        },
+        "text": "\u201cWe read to know we're not alone.\u201d"
+    },
+    {
+        "tags": [
+            "knowledge",
+            "learning",
+            "understanding",
+            "wisdom"
+        ],
+        "author": {
+            "name": "Albert Einstein",
+            "goodreads_link": "/author/show/9810.Albert_Einstein",
+            "slug": "Albert-Einstein"
+        },
+        "text": "\u201cAny fool can know. The point is to understand.\u201d"
+    },
+    {
+        "tags": [
+            "books",
+            "library"
+        ],
+        "author": {
+            "name": "Jorge Luis Borges",
+            "goodreads_link": "/author/show/500.Jorge_Luis_Borges",
+            "slug": "Jorge-Luis-Borges"
+        },
+        "text": "\u201cI have always imagined that Paradise will be a kind of library.\u201d"
+    },
+    {
+        "tags": [
+            "inspirational"
+        ],
+        "author": {
+            "name": "George Eliot",
+            "goodreads_link": "/author/show/173.George_Eliot",
+            "slug": "George-Eliot"
+        },
+        "text": "\u201cIt is never too late to be what you might have been.\u201d"
+    }
+];
+    for (var i in data) {
+        var d = data[i];
+        var tags = $.map(d['tags'], function(t) {
+            return "<a class='tag'>" + t + "</a>";
+        }).join(" ");
+        document.write("<div class='quote'><span class='text'>" + d['text'] + "</span><span>by <small class='author'>" + d['author']['name'] + "</small></span><div class='tags'>Tags: " + tags + "</div></div>");
+        }
+</script><div class="quote"><span class="text">“The more that you read, the more things you will know. The more that you learn, the more places you'll go.”</span><span>by <small class="author">Dr. Seuss</small></span><div class="tags">Tags: <a class="tag">learning</a> <a class="tag">reading</a> <a class="tag">seuss</a></div></div><div class="quote"><span class="text">“Of course it is happening inside your head, Harry, but why on earth should that mean that it is not real?”</span><span>by <small class="author">J.K. Rowling</small></span><div class="tags">Tags: <a class="tag">dumbledore</a></div></div><div class="quote"><span class="text">“The truth is, everyone is going to hurt you. You just got to find the ones worth suffering for.”</span><span>by <small class="author">Bob Marley</small></span><div class="tags">Tags: <a class="tag">friendship</a></div></div><div class="quote"><span class="text">“Not all of us can do great things. But we can do small things with great love.”</span><span>by <small class="author">Mother Teresa</small></span><div class="tags">Tags: <a class="tag">misattributed-to-mother-teresa</a> <a class="tag">paraphrased</a></div></div><div class="quote"><span class="text">“To the well-organized mind, death is but the next great adventure.”</span><span>by <small class="author">J.K. Rowling</small></span><div class="tags">Tags: <a class="tag">death</a> <a class="tag">inspirational</a></div></div><div class="quote"><span class="text">“All you need is love. But a little chocolate now and then doesn't hurt.”</span><span>by <small class="author">Charles M. Schulz</small></span><div class="tags">Tags: <a class="tag">chocolate</a> <a class="tag">food</a> <a class="tag">humor</a></div></div><div class="quote"><span class="text">“We read to know we're not alone.”</span><span>by <small class="author">William Nicholson</small></span><div class="tags">Tags: <a class="tag">misattributed-to-c-s-lewis</a> <a class="tag">reading</a></div></div><div class="quote"><span class="text">“Any fool can know. The point is to understand.”</span><span>by <small class="author">Albert Einstein</small></span><div class="tags">Tags: <a class="tag">knowledge</a> <a class="tag">learning</a> <a class="tag">understanding</a> <a class="tag">wisdom</a></div></div><div class="quote"><span class="text">“I have always imagined that Paradise will be a kind of library.”</span><span>by <small class="author">Jorge Luis Borges</small></span><div class="tags">Tags: <a class="tag">books</a> <a class="tag">library</a></div></div><div class="quote"><span class="text">“It is never too late to be what you might have been.”</span><span>by <small class="author">George Eliot</small></span><div class="tags">Tags: <a class="tag">inspirational</a></div></div>
+<nav>
+    <ul class="pager">
+        
+        <li class="previous">
+            <a href="/js/page/3/"><span aria-hidden="true">←</span> Previous</a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/js/page/5/">Next <span aria-hidden="true">→</span></a>
+        </li>
+        
+    </ul>
+</nav>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">
+                Quotes by: <a href="https://www.goodreads.com/quotes">GoodReads.com</a>
+            </p>
+            <p class="copyright">
+                Made with <span class="sh-red">❤</span> by <a href="https://scrapinghub.com">Scrapinghub</a>
+            </p>
+        </div>
+    </footer>
+
+</body></html>

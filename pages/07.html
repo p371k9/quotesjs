@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<title>Quotes to Scrape</title>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row header-box">
+            <div class="col-md-8">
+                <h1>
+                    <a href="/" style="text-decoration: none">Quotes to Scrape</a>
+                </h1>
+            </div>
+            <div class="col-md-4">
+                <p>
+                
+                    <a href="/login">Login</a>
+                
+                </p>
+            </div>
+        </div>
+    
+<script src="/static/jquery.js"></script>
+<script>
+    var data = [
+    {
+        "tags": [
+            "alcohol"
+        ],
+        "author": {
+            "name": "Charles Bukowski",
+            "goodreads_link": "/author/show/13275.Charles_Bukowski",
+            "slug": "Charles-Bukowski"
+        },
+        "text": "\u201cThat's the problem with drinking, I thought, as I poured myself a drink. If something bad happens you drink in an attempt to forget; if something good happens you drink in order to celebrate; and if nothing happens you drink to make something happen.\u201d"
+    },
+    {
+        "tags": [
+            "the-hunger-games"
+        ],
+        "author": {
+            "name": "Suzanne Collins",
+            "goodreads_link": "/author/show/153394.Suzanne_Collins",
+            "slug": "Suzanne-Collins"
+        },
+        "text": "\u201cYou don\u2019t forget the face of the person who was your last hope.\u201d"
+    },
+    {
+        "tags": [
+            "humor"
+        ],
+        "author": {
+            "name": "Suzanne Collins",
+            "goodreads_link": "/author/show/153394.Suzanne_Collins",
+            "slug": "Suzanne-Collins"
+        },
+        "text": "\u201cRemember, we're madly in love, so it's all right to kiss me anytime you feel like it.\u201d"
+    },
+    {
+        "tags": [
+            "love"
+        ],
+        "author": {
+            "name": "C.S. Lewis",
+            "goodreads_link": "/author/show/1069006.C_S_Lewis",
+            "slug": "C-S-Lewis"
+        },
+        "text": "\u201cTo love at all is to be vulnerable. Love anything and your heart will be wrung and possibly broken. If you want to make sure of keeping it intact you must give it to no one, not even an animal. Wrap it carefully round with hobbies and little luxuries; avoid all entanglements. Lock it up safe in the casket or coffin of your selfishness. But in that casket, safe, dark, motionless, airless, it will change. It will not be broken; it will become unbreakable, impenetrable, irredeemable. To love is to be vulnerable.\u201d"
+    },
+    {
+        "tags": [
+            "bilbo",
+            "journey",
+            "lost",
+            "quest",
+            "travel",
+            "wander"
+        ],
+        "author": {
+            "name": "J.R.R. Tolkien",
+            "goodreads_link": "/author/show/656983.J_R_R_Tolkien",
+            "slug": "J-R-R-Tolkien"
+        },
+        "text": "\u201cNot all those who wander are lost.\u201d"
+    },
+    {
+        "tags": [
+            "live-death-love"
+        ],
+        "author": {
+            "name": "J.K. Rowling",
+            "goodreads_link": "/author/show/1077326.J_K_Rowling",
+            "slug": "J-K-Rowling"
+        },
+        "text": "\u201cDo not pity the dead, Harry. Pity the living, and, above all those who live without love.\u201d"
+    },
+    {
+        "tags": [
+            "good",
+            "writing"
+        ],
+        "author": {
+            "name": "Ernest Hemingway",
+            "goodreads_link": "/author/show/1455.Ernest_Hemingway",
+            "slug": "Ernest-Hemingway"
+        },
+        "text": "\u201cThere is nothing to writing. All you do is sit down at a typewriter and bleed.\u201d"
+    },
+    {
+        "tags": [
+            "life",
+            "regrets"
+        ],
+        "author": {
+            "name": "Ralph Waldo Emerson",
+            "goodreads_link": "/author/show/12080.Ralph_Waldo_Emerson",
+            "slug": "Ralph-Waldo-Emerson"
+        },
+        "text": "\u201cFinish each day and be done with it. You have done what you could. Some blunders and absurdities no doubt crept in; forget them as soon as you can. Tomorrow is a new day. You shall begin it serenely and with too high a spirit to be encumbered with your old nonsense.\u201d"
+    },
+    {
+        "tags": [
+            "education"
+        ],
+        "author": {
+            "name": "Mark Twain",
+            "goodreads_link": "/author/show/1244.Mark_Twain",
+            "slug": "Mark-Twain"
+        },
+        "text": "\u201cI have never let my schooling interfere with my education.\u201d"
+    },
+    {
+        "tags": [
+            "troubles"
+        ],
+        "author": {
+            "name": "Dr. Seuss",
+            "goodreads_link": "/author/show/61105.Dr_Seuss",
+            "slug": "Dr-Seuss"
+        },
+        "text": "\u201cI have heard there are troubles of more than one kind. Some come from ahead and some come from behind. But I've bought a big bat. I'm all ready you see. Now my troubles are going to have troubles with me!\u201d"
+    }
+];
+    for (var i in data) {
+        var d = data[i];
+        var tags = $.map(d['tags'], function(t) {
+            return "<a class='tag'>" + t + "</a>";
+        }).join(" ");
+        document.write("<div class='quote'><span class='text'>" + d['text'] + "</span><span>by <small class='author'>" + d['author']['name'] + "</small></span><div class='tags'>Tags: " + tags + "</div></div>");
+        }
+</script><div class="quote"><span class="text">“That's the problem with drinking, I thought, as I poured myself a drink. If something bad happens you drink in an attempt to forget; if something good happens you drink in order to celebrate; and if nothing happens you drink to make something happen.”</span><span>by <small class="author">Charles Bukowski</small></span><div class="tags">Tags: <a class="tag">alcohol</a></div></div><div class="quote"><span class="text">“You don’t forget the face of the person who was your last hope.”</span><span>by <small class="author">Suzanne Collins</small></span><div class="tags">Tags: <a class="tag">the-hunger-games</a></div></div><div class="quote"><span class="text">“Remember, we're madly in love, so it's all right to kiss me anytime you feel like it.”</span><span>by <small class="author">Suzanne Collins</small></span><div class="tags">Tags: <a class="tag">humor</a></div></div><div class="quote"><span class="text">“To love at all is to be vulnerable. Love anything and your heart will be wrung and possibly broken. If you want to make sure of keeping it intact you must give it to no one, not even an animal. Wrap it carefully round with hobbies and little luxuries; avoid all entanglements. Lock it up safe in the casket or coffin of your selfishness. But in that casket, safe, dark, motionless, airless, it will change. It will not be broken; it will become unbreakable, impenetrable, irredeemable. To love is to be vulnerable.”</span><span>by <small class="author">C.S. Lewis</small></span><div class="tags">Tags: <a class="tag">love</a></div></div><div class="quote"><span class="text">“Not all those who wander are lost.”</span><span>by <small class="author">J.R.R. Tolkien</small></span><div class="tags">Tags: <a class="tag">bilbo</a> <a class="tag">journey</a> <a class="tag">lost</a> <a class="tag">quest</a> <a class="tag">travel</a> <a class="tag">wander</a></div></div><div class="quote"><span class="text">“Do not pity the dead, Harry. Pity the living, and, above all those who live without love.”</span><span>by <small class="author">J.K. Rowling</small></span><div class="tags">Tags: <a class="tag">live-death-love</a></div></div><div class="quote"><span class="text">“There is nothing to writing. All you do is sit down at a typewriter and bleed.”</span><span>by <small class="author">Ernest Hemingway</small></span><div class="tags">Tags: <a class="tag">good</a> <a class="tag">writing</a></div></div><div class="quote"><span class="text">“Finish each day and be done with it. You have done what you could. Some blunders and absurdities no doubt crept in; forget them as soon as you can. Tomorrow is a new day. You shall begin it serenely and with too high a spirit to be encumbered with your old nonsense.”</span><span>by <small class="author">Ralph Waldo Emerson</small></span><div class="tags">Tags: <a class="tag">life</a> <a class="tag">regrets</a></div></div><div class="quote"><span class="text">“I have never let my schooling interfere with my education.”</span><span>by <small class="author">Mark Twain</small></span><div class="tags">Tags: <a class="tag">education</a></div></div><div class="quote"><span class="text">“I have heard there are troubles of more than one kind. Some come from ahead and some come from behind. But I've bought a big bat. I'm all ready you see. Now my troubles are going to have troubles with me!”</span><span>by <small class="author">Dr. Seuss</small></span><div class="tags">Tags: <a class="tag">troubles</a></div></div>
+<nav>
+    <ul class="pager">
+        
+        <li class="previous">
+            <a href="/js/page/6/"><span aria-hidden="true">←</span> Previous</a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/js/page/8/">Next <span aria-hidden="true">→</span></a>
+        </li>
+        
+    </ul>
+</nav>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">
+                Quotes by: <a href="https://www.goodreads.com/quotes">GoodReads.com</a>
+            </p>
+            <p class="copyright">
+                Made with <span class="sh-red">❤</span> by <a href="https://scrapinghub.com">Scrapinghub</a>
+            </p>
+        </div>
+    </footer>
+
+</body></html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<title>Quotes to Scrape</title>
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row header-box">
+            <div class="col-md-8">
+                <h1>
+                    <a href="/" style="text-decoration: none">Quotes to Scrape</a>
+                </h1>
+            </div>
+            <div class="col-md-4">
+                <p>
+                
+                    <a href="/login">Login</a>
+                
+                </p>
+            </div>
+        </div>
+    
+<script src="/static/jquery.js"></script>
+<script>
+    var data = [
+    {
+        "tags": [
+            "read",
+            "readers",
+            "reading",
+            "reading-books"
+        ],
+        "author": {
+            "name": "George R.R. Martin",
+            "goodreads_link": "/author/show/346732.George_R_R_Martin",
+            "slug": "George-R-R-Martin"
+        },
+        "text": "\u201cA reader lives a thousand lives before he dies, said Jojen. The man who never reads lives only one.\u201d"
+    },
+    {
+        "tags": [
+            "books",
+            "inspirational",
+            "reading",
+            "tea"
+        ],
+        "author": {
+            "name": "C.S. Lewis",
+            "goodreads_link": "/author/show/1069006.C_S_Lewis",
+            "slug": "C-S-Lewis"
+        },
+        "text": "\u201cYou can never get a cup of tea large enough or a book long enough to suit me.\u201d"
+    },
+    {
+        "tags": [],
+        "author": {
+            "name": "Marilyn Monroe",
+            "goodreads_link": "/author/show/82952.Marilyn_Monroe",
+            "slug": "Marilyn-Monroe"
+        },
+        "text": "\u201cYou believe lies so you eventually learn to trust no one but yourself.\u201d"
+    },
+    {
+        "tags": [
+            "girls",
+            "love"
+        ],
+        "author": {
+            "name": "Marilyn Monroe",
+            "goodreads_link": "/author/show/82952.Marilyn_Monroe",
+            "slug": "Marilyn-Monroe"
+        },
+        "text": "\u201cIf you can make a woman laugh, you can make her do anything.\u201d"
+    },
+    {
+        "tags": [
+            "life",
+            "simile"
+        ],
+        "author": {
+            "name": "Albert Einstein",
+            "goodreads_link": "/author/show/9810.Albert_Einstein",
+            "slug": "Albert-Einstein"
+        },
+        "text": "\u201cLife is like riding a bicycle. To keep your balance, you must keep moving.\u201d"
+    },
+    {
+        "tags": [
+            "love"
+        ],
+        "author": {
+            "name": "Marilyn Monroe",
+            "goodreads_link": "/author/show/82952.Marilyn_Monroe",
+            "slug": "Marilyn-Monroe"
+        },
+        "text": "\u201cThe real lover is the man who can thrill you by kissing your forehead or smiling into your eyes or just staring into space.\u201d"
+    },
+    {
+        "tags": [
+            "attributed-no-source"
+        ],
+        "author": {
+            "name": "Marilyn Monroe",
+            "goodreads_link": "/author/show/82952.Marilyn_Monroe",
+            "slug": "Marilyn-Monroe"
+        },
+        "text": "\u201cA wise girl kisses but doesn't love, listens but doesn't believe, and leaves before she is left.\u201d"
+    },
+    {
+        "tags": [
+            "hope",
+            "inspirational"
+        ],
+        "author": {
+            "name": "Martin Luther King Jr.",
+            "goodreads_link": "/author/show/23924.Martin_Luther_King_Jr_",
+            "slug": "Martin-Luther-King-Jr"
+        },
+        "text": "\u201cOnly in the darkness can you see the stars.\u201d"
+    },
+    {
+        "tags": [
+            "dumbledore"
+        ],
+        "author": {
+            "name": "J.K. Rowling",
+            "goodreads_link": "/author/show/1077326.J_K_Rowling",
+            "slug": "J-K-Rowling"
+        },
+        "text": "\u201cIt matters not what someone is born, but what they grow to be.\u201d"
+    },
+    {
+        "tags": [
+            "love"
+        ],
+        "author": {
+            "name": "James Baldwin",
+            "goodreads_link": "/author/show/10427.James_Baldwin",
+            "slug": "James-Baldwin"
+        },
+        "text": "\u201cLove does not begin and end the way we seem to think it does. Love is a battle, love is a war; love is a growing up.\u201d"
+    }
+];
+    for (var i in data) {
+        var d = data[i];
+        var tags = $.map(d['tags'], function(t) {
+            return "<a class='tag'>" + t + "</a>";
+        }).join(" ");
+        document.write("<div class='quote'><span class='text'>" + d['text'] + "</span><span>by <small class='author'>" + d['author']['name'] + "</small></span><div class='tags'>Tags: " + tags + "</div></div>");
+        }
+</script><div class="quote"><span class="text">“A reader lives a thousand lives before he dies, said Jojen. The man who never reads lives only one.”</span><span>by <small class="author">George R.R. Martin</small></span><div class="tags">Tags: <a class="tag">read</a> <a class="tag">readers</a> <a class="tag">reading</a> <a class="tag">reading-books</a></div></div><div class="quote"><span class="text">“You can never get a cup of tea large enough or a book long enough to suit me.”</span><span>by <small class="author">C.S. Lewis</small></span><div class="tags">Tags: <a class="tag">books</a> <a class="tag">inspirational</a> <a class="tag">reading</a> <a class="tag">tea</a></div></div><div class="quote"><span class="text">“You believe lies so you eventually learn to trust no one but yourself.”</span><span>by <small class="author">Marilyn Monroe</small></span><div class="tags">Tags: </div></div><div class="quote"><span class="text">“If you can make a woman laugh, you can make her do anything.”</span><span>by <small class="author">Marilyn Monroe</small></span><div class="tags">Tags: <a class="tag">girls</a> <a class="tag">love</a></div></div><div class="quote"><span class="text">“Life is like riding a bicycle. To keep your balance, you must keep moving.”</span><span>by <small class="author">Albert Einstein</small></span><div class="tags">Tags: <a class="tag">life</a> <a class="tag">simile</a></div></div><div class="quote"><span class="text">“The real lover is the man who can thrill you by kissing your forehead or smiling into your eyes or just staring into space.”</span><span>by <small class="author">Marilyn Monroe</small></span><div class="tags">Tags: <a class="tag">love</a></div></div><div class="quote"><span class="text">“A wise girl kisses but doesn't love, listens but doesn't believe, and leaves before she is left.”</span><span>by <small class="author">Marilyn Monroe</small></span><div class="tags">Tags: <a class="tag">attributed-no-source</a></div></div><div class="quote"><span class="text">“Only in the darkness can you see the stars.”</span><span>by <small class="author">Martin Luther King Jr.</small></span><div class="tags">Tags: <a class="tag">hope</a> <a class="tag">inspirational</a></div></div><div class="quote"><span class="text">“It matters not what someone is born, but what they grow to be.”</span><span>by <small class="author">J.K. Rowling</small></span><div class="tags">Tags: <a class="tag">dumbledore</a></div></div><div class="quote"><span class="text">“Love does not begin and end the way we seem to think it does. Love is a battle, love is a war; love is a growing up.”</span><span>by <small class="author">James Baldwin</small></span><div class="tags">Tags: <a class="tag">love</a></div></div>
+<nav>
+    <ul class="pager">
+        
+        <li class="previous">
+            <a href="/js/page/4/"><span aria-hidden="true">←</span> Previous</a>
+        </li>
+        
+        
+        <li class="next">
+            <a href="/js/page/6/">Next <span aria-hidden="true">→</span></a>
+        </li>
+        
+    </ul>
+</nav>
+
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">
+                Quotes by: <a href="https://www.goodreads.com/quotes">GoodReads.com</a>
+            </p>
+            <p class="copyright">
+                Made with <span class="sh-red">❤</span> by <a href="https://scrapinghub.com">Scrapinghub</a>
+            </p>
+        </div>
+    </footer>
+
+</body></html>
