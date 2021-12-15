@@ -1,6 +1,6 @@
 # quotesjs
 
-Crawl and scrape data from HTML files. The htmls saved to pages/ directory/folder with the "foxdom" script. There are other alternatives for saving web pages, such as a FireFox extension called Save Page WE.
+Crawl and scrape data from HTML files. The htmls saved to pages/ directory/folder with the "foxdom" script. There are other alternatives for saving web pages, such as a FireFox extension called Save Page WE. HTML files are processed in the order they are named.
 
 Target: http://quotes.toscrape.com/js/
 
